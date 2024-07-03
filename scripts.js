@@ -28,7 +28,6 @@ setInterval(manterConexao, 5000, usuario);
 setInterval(buscarParticipantes, 10000);
 
 
-
 // ENTRADA NA SALA
 
 function perguntarNome() {

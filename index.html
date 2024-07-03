@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bate Papo Uol</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <img src="logo-chatuol.png" alt="logo chat uol">
+            <ion-icon name="people-sharp" onclick="abrirMenu()"></ion-icon>
+        </div>
+
+        <ul class="mensagens">
+            <!--As mensagens vão ser carregadas aqui via JavaScript-->
+        </ul>
+
+        <div class="footer">
+            <div class="escrever-mensagem">
+                <input type="text" placeholder="Escreva aqui...">
+                <div class="texto-destinatario">
+                    Enviando para Todos (Público)
+                </div>
+            </div>
+            <ion-icon class="send-icon" name="paper-plane-outline" onclick="enviarMensagem(this)"></ion-icon>
+        </div>
+    </div>
+
+    <div class="cover escondido" onclick="fecharMenu()"></div>
+
+    <div class="menu-lateral">
+
+        <h3>Escolha um contato para enviar mensagem:</h3>
+
+        <ul class="participantes">
+            <!--Os participantes vão ser carregados aqui via JavaScript-->
+        </ul>
+
+        <h3>Escolha a visibilidade:</h3>
+
+        <ul class="visibilidade">
+            <li class="publico" onclick="escolherVisibilidade(this)">
+                <div class="caixa-visibilidade">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <p>Público</p>
+                </div>
+                <ion-icon name="checkmark-sharp" class="check display-check"></ion-icon>
+            </li>
+            <li class="reservadamente" onclick="escolherVisibilidade(this)">
+                <div class="caixa-visibilidade">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <p>Reservadamente</p>
+                </div>
+                <ion-icon name="checkmark-sharp" class="check"></ion-icon>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
